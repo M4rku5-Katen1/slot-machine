@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Overwatch Slots</title>
+    <style>
+        html {background-color: rgba(255, 255, 255, 0.99);
+            color: #000000;
+        font:Damascus;
+        padding:20px;
+        size:"6"}
+    </style>
+ Overwatch Slots
+</head>
+<body>
+    <script>
+        var OverwatchCharacters =
+                   ["Images/mercy slots.jpeg",
+                    "Images/soldier76 slots.jpeg",
+                    "Images/mccree slots .jpeg",
+                    "Images/roadhog slots.jpeg",
+                    "Images/hanzo slots.jpeg",
+                    "Images/junkrat slots.jpeg",
+                    "Images/Pharah slots.jpeg",
+                    "Images/reaper slots.jpeg",
+                    "Images/tracer slots.jpeg",
+                       "Images/genji slots.jpeg"];
+
+        function spin(e) {
+            'use strict';
+            var Wheel1 = document.getElementById("box1");
+            var RanNumber1 = Math.floor((Math.random() * 10) + 0);      //1. randomly generate a number from 0 to 9
+            Wheel1.src = OverwatchCharacters[RanNumber1];               //2. set Wheel1.src = OverwatchCharacters[your random number]
+
+            var Wheel2 = document.getElementById("box2");
+            var RanNumber2 = Math.floor((Math.random() * 10) + 0);
+            Wheel2.src = OverwatchCharacters[RanNumber2];
+
+            var Wheel3 = document.getElementById("box3");
+            var RanNumber3 = Math.floor((Math.random() * 10) + 0);
+            Wheel3.src = OverwatchCharacters[RanNumber3];
+
+            var Wheel4 = document.getElementById("box4");
+            var RanNumber4 = Math.floor((Math.random() * 10) + 0);
+            Wheel4.src = OverwatchCharacters[RanNumber4];
+
+            var Wheel5 = document.getElementById("box5");
+            var RanNumber5 = Math.floor((Math.random() * 10) + 0);
+            Wheel5.src = OverwatchCharacters[RanNumber5];
+
+            if (typeof e == 'undefined') e = window.event;
+            if (error) e.preventDefault();
+        return false;
+    }
+        window.onload = function() {
+            'use strict';
+        var form = document.getElementById("slotForm");
+        form.addEventListener("submit", spin, false);
+        spin();
+    };
+</script>
+
+    <table border="15">
+        <td>
+            <img src="Images/mercy slots.jpeg" id="box1">
+            <td>
+                <img src="Images/genji slots.jpeg" id="box2">
+                <td>
+                    <img src="Images/mccree slots .jpeg" id="box3">
+                        <td>
+                            <img src="Images/reaper slots.jpeg" id="box4">
+                                 <td>
+                                     <img src="Images/tracer slots.jpeg" id="box5">
+                        </td>
+                    </td>
+                </td>
+            </td>
+        </td>
+        </tr>
+    </table>
+<script>
+
+</script>
+    <input type="button" value="Spin" id="submit" onclick="spin();">
+</body>
+</html>
